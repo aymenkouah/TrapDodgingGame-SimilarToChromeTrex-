@@ -1,3 +1,12 @@
+#Made by: Kouah Mohammed Aymen
+#Computer science student at "National Computer science Engineering School, Algiers (ESI)"
+#E-mail: jm_kouah@esi.dz
+#Github: https://github.com/aymenkouah
+
+#Requires installaling "pygame"
+#https://www.pygame.org/news
+
+
 #Modules and Packages
 import pygame
 import time
@@ -72,6 +81,7 @@ fps = pygame.time.Clock()
 background_color = (0, 0, 0)  # (#000000)
 player_color = (255, 255, 0)  # (#ffff00)
 obstacle_color = (255, 255, 0)  # (#ffff00)
+
 pygame.init()
 window = pygame.display.set_mode((width, height))
 
@@ -132,9 +142,12 @@ def text_to_screen_score(window, score, pos, text):
 
 
 # Main code
+
 while running:
     running = game_over(player, obs)
+    
     window.fill(background_color)
+    
     player.draw(window, player_color)
 
     obstacles(obs)
@@ -167,7 +180,9 @@ while running:
     pygame.display.update()
 
 time.sleep(1)
+
 window.fill(background_color)
 text_to_screen_score(
     window, score, (width / 2.0, height / 2.0), "Your score is: ")
+
 time.sleep(3)
